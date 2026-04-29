@@ -23,10 +23,6 @@ python3 -m http.server 8000
 
 Then visit `http://localhost:8000`.
 
-## Deployment
-
-Upload the contents of `SPARKLECATDEV.fi` to a static hosting provider. Keep the folder structure unchanged so page links and image paths continue to resolve correctly.
-
 ## License
 
 See `LICENSE.txt`.
