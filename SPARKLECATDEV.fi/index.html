@@ -26134,37 +26134,6 @@
       body.is-character-page #characterHomeButton {
         display: block;
       }
-      #wipToggleButton {
-        position: fixed;
-        right: 1rem;
-        bottom: 1rem;
-        z-index: 100000;
-        border: 0;
-        border-radius: 0.5rem;
-        background: #111;
-        color: #fff;
-        font:
-          700 0.78rem/1.1 system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          Segoe UI,
-          sans-serif;
-        letter-spacing: 0;
-        padding: 0.75rem 0.9rem;
-        box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.25);
-        cursor: pointer;
-      }
-      #wipToggleButton[aria-pressed="true"] {
-        background: #0a7a3d;
-      }
-      body:not(.wip-enabled) section[id^="placeholder-"] {
-        display: none !important;
-      }
-      body:not(.wip-enabled) #characters-section #text03,
-      body:not(.wip-enabled) #characters-section #buttons20,
-      body:not(.wip-enabled) #characters-section .caption {
-        display: none !important;
-      }
       #characters-section #container34 > .wrapper > .inner {
         gap: clamp(2rem, 4vw, 4rem) !important;
         align-items: flex-start !important;
@@ -34253,49 +34222,7 @@
         ready.run();
       })();
     </script>
-    <a id="characterHomeButton" href="index.html#home">HOME</a
-    ><button id="wipToggleButton" type="button" aria-pressed="false">
-      WORK IN PROGRESS STUFFS
-    </button>
-    <script>
-      window.SPARKLECATDEV_WIP = false;
-      window.setSparklecatWip = function (enabled) {
-        window.SPARKLECATDEV_WIP = !!enabled;
-        document.body.classList.toggle("wip-enabled", window.SPARKLECATDEV_WIP);
-        var button = document.getElementById("wipToggleButton");
-        if (button) {
-          button.setAttribute("aria-pressed", String(window.SPARKLECATDEV_WIP));
-          button.textContent = window.SPARKLECATDEV_WIP
-            ? "HIDE WORK IN PROGRESS STUFFS"
-            : "WORK IN PROGRESS STUFFS";
-        }
-      };
-      document.addEventListener("DOMContentLoaded", function () {
-        var placeholderPattern =
-          /^(?:PLACEHOLDER|Placeholder text\.|placeholder link|Q: Placeholder question\?|A: Placeholder answer text\.|(?:name|personality|dob|age|gender|species|height|relatives|other): placeholder|starring: placeholder|[.:])$/;
-        document
-          .querySelectorAll("p,h1,h2,h3,strong,span,a")
-          .forEach(function (el) {
-            if (el.id === "wipToggleButton" || el.closest("#wipToggleButton"))
-              return;
-            var text = el.textContent.trim();
-            if (placeholderPattern.test(text))
-              el.setAttribute("data-wip-placeholder", "");
-          });
-        window.setSparklecatWip(window.SPARKLECATDEV_WIP);
-        var button = document.getElementById("wipToggleButton");
-        if (button) {
-          button.addEventListener("click", function () {
-            if (window.SPARKLECATDEV_WIP) {
-              window.setSparklecatWip(false);
-              return;
-            }
-            if (window.confirm("Enable work in progress placeholders?"))
-              window.setSparklecatWip(true);
-          });
-        }
-      });
-    </script>
+    <a id="characterHomeButton" href="index.html#home">HOME</a>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         function syncCharacterHomeButton() {
