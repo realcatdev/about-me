@@ -12,12 +12,11 @@ Static personal website for SPARKLECATDEV.fi. The site is built as plain HTML, C
 
 ## Local Preview
 
-Open `index.html` in a browser from the `SPARKLECATDEV.fi` folder.
+Open `index.html` in a browser from the repository root.
 
 For a local server preview, run:
 
 ```sh
-cd SPARKLECATDEV.fi
 python3 -m http.server 8000
 ```
 
