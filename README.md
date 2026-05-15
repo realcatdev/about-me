@@ -1,6 +1,6 @@
-# SPARKLECATDEV.fi
+# sparklecat.dev
 
-Static personal website for SPARKLECATDEV.fi. The site is built as plain HTML, CSS, JavaScript, and local image assets, so it can be hosted by any static web host.
+Static personal website for sparklecat.dev. The site is built as plain HTML, CSS, JavaScript, and local image assets, so it can be hosted by any static web host.
 
 ## Structure
 
@@ -8,6 +8,7 @@ Static personal website for SPARKLECATDEV.fi. The site is built as plain HTML, C
 - `donate/index.html` - donation page.
 - `assets/images/` - site artwork and image assets.
 - `robots.txt` - crawler rules.
+- `CNAME` - custom domain for GitHub Pages.
 - `LICENSE.txt` - project license.
 
 ## Local Preview
